@@ -6,13 +6,14 @@
     <title>Landing Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
+        /* Common styling */
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: row;
+            flex-direction: row-reverse;  /* Sidebar on the right for desktop */
         }
 
         .sidebar {
@@ -20,76 +21,30 @@
             padding: 20px;
             background-color: white;
             box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
-            overflow-y: auto;
+            height: 100vh;  /* Full height to eliminate scrollbar */
+            overflow-y: hidden;  /* No scrollbar */
         }
 
-        h1 {
-            text-align: left;
-            margin-bottom: 20px;
-        }
+        /* ... rest of your existing CSS ... */
 
-        .topic-button {
-            display: block;
-            width: 100%;
-            background-color: #4CAF50;
-            padding: 8px 16px;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            margin-bottom: 15px;
-            text-align: left;
-        }
-
-        .topic-button:hover {
-            background-color: #45a049;
-        }
-
-        .main-content {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f4f4f4;
-        }
-
-        img {
-            max-width: 80%;
-            max-height: 80vh;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Media Queries for Responsiveness */
+        /* Media Queries for mobile */
         @media screen and (max-width: 768px) {
             body {
                 flex-direction: column;
             }
-            .sidebar {
-                width: 100%;
-                order: 2;
-                padding: 15px; /* Reduced padding for mobile */
-            }
-            .main-content {
-                order: 1;
-                padding: 10px; /* Added padding to ensure the image doesn't touch the edges */
-            }
-            img {
-                max-width: 100%;
-                max-height: 40vh; /* Reduced the height to ensure it fits without need for scrolling */
-            }
+
+            /* ... rest of your existing CSS for mobile ... */
         }
     </style>
 </head>
 <body>
-    <div class="main-content">
-        <img src="4f152ec8-180d-405c-b450-6a0d9d136189.png" alt="Centered Image">
-    </div>
     <div class="sidebar">
         <h1>Welcome to the Landing Page</h1>
         <a href="summary.html" class="topic-button">Topic 1</a>
         <a href="summary.html" class="topic-button">Topic 2</a>
+    </div>
+    <div class="main-content">
+        <img src="4f152ec8-180d-405c-b450-6a0d9d136189.png" alt="Centered Image">
     </div>
 </body>
 </html>

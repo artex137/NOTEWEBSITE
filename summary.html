@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summary Page</title>
+    <title>Landing Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         body {
@@ -28,12 +28,7 @@
             margin-bottom: 20px;
         }
 
-        p {
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .nav-button {
+        .topic-button {
             display: block;
             width: 100%;
             background-color: #4CAF50;
@@ -43,10 +38,11 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            margin-bottom: 15px;
             text-align: left;
         }
 
-        .nav-button:hover {
+        .topic-button:hover {
             background-color: #45a049;
         }
 
@@ -72,25 +68,25 @@
             }
             .sidebar {
                 width: 100%;
-                order: 1;
+                order: 2;
                 padding: 15px; /* Reduced padding for mobile */
             }
             .main-content {
-                order: 2;
-                padding: 10px; /* Added padding to ensure the image doesn't touch the edges */
+                order: 1;
+                padding: 5px; /* Added padding to ensure the image doesn't touch the edges */
             }
             img {
-                max-width: 100%;
-                max-height: 40vh; /* Reduced the height to ensure it fits without need for scrolling */
+                max-width: 90%; /* Adjusted width to ensure a better fit */
+                max-height: 50vh; /* Adjusted the height for better visibility */
             }
         }
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <h1>Summary for Topic 1</h1>
-        <p>Here is the content for Topic 1.</p>
-        <a href="index.html" class="nav-button">Back to Landing Page</a>
+        <h1>Welcome to the Landing Page</h1>
+        <a href="summary.html" class="topic-button">Topic 1</a>
+        <a href="summary.html" class="topic-button">Topic 2</a>
     </div>
     <div class="main-content">
         <img src="4f152ec8-180d-405c-b450-6a0d9d136189.png" alt="Centered Image">

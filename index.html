@@ -17,14 +17,16 @@
 
         .sidebar {
             width: 250px;
-            padding: 15px;
+            padding: 20px;
             background-color: white;
             box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+            overflow-y: hidden; /* Removes scrollbar */
+            height: 100vh; /* Ensures full height */
         }
 
         h1 {
             text-align: left;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .topic-button {
@@ -37,12 +39,8 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             text-align: left;
-        }
-
-        .topic-button:last-child {
-            margin-bottom: 0;
         }
 
         .topic-button:hover {
@@ -55,7 +53,6 @@
             justify-content: center;
             align-items: center;
             background-color: #f4f4f4;
-            padding-left: 20px;
         }
 
         img {
@@ -73,15 +70,15 @@
             .sidebar {
                 width: 100%;
                 order: 2;
-                padding: 15px; 
+                padding: 15px;
             }
             .main-content {
                 order: 1;
-                padding: 10px; 
+                padding: 5px;
             }
             img {
-                max-width: 90%; 
-                max-height: 50vh; 
+                max-width: 90%;
+                max-height: 50vh;
             }
         }
     </style>
@@ -89,8 +86,8 @@
 <body>
     <div class="sidebar">
         <h1>Welcome to the Landing Page</h1>
-        <a href="summary.html" class="topic-button">Topic 1</a>
-        <a href="summary.html" class="topic-button">Topic 2</a>
+        <a href="./summary.html" class="topic-button">Topic 1</a>
+        <a href="./summary.html" class="topic-button">Topic 2</a>
     </div>
     <div class="main-content">
         <img src="4f152ec8-180d-405c-b450-6a0d9d136189.png" alt="Centered Image">

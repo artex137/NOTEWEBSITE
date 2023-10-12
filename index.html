@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
@@ -13,13 +13,23 @@
             padding: 0;
             display: flex;
             flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
         }
 
         .sidebar {
             width: 250px;
             padding: 20px;
             background-color: white;
-            box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
         }
 
         h1 {
@@ -60,16 +70,27 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
+        /* Media Queries for Responsiveness */
         @media screen and (max-width: 768px) {
             body {
+                justify-content: unset;
+                align-items: unset;
+            }
+            .container {
                 flex-direction: column;
+                align-items: center;
             }
             .sidebar {
+                order: 2;
                 width: 100%;
                 padding: 15px;
+                margin-right: 0;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
             }
             .main-content {
-                padding: 5px;
+                order: 1;
+                width: 100%;
+                padding: 10px;
             }
             img {
                 max-width: 90%;
@@ -79,13 +100,15 @@
     </style>
 </head>
 <body>
-    <div class="sidebar">
-        <h1>Welcome to the Landing Page</h1>
-        <a href="summary.html" class="topic-button">Topic 1</a>
-        <a href="summary.html" class="topic-button">Topic 2</a>
-    </div>
-    <div class="main-content">
-        <img src="4f152ec8-180d-405c-b450-6a0d9d136189.png" alt="Centered Image">
+    <div class="container">
+        <div class="sidebar">
+            <h1>Welcome to the Landing Page</h1>
+            <a href="summary.html" class="topic-button">Topic 1</a>
+            <a href="summary.html" class="topic-button">Topic 2</a>
+        </div>
+        <div class="main-content">
+            <img src="4f152ec8-180d-405c-b450-6a0d9d136189.png" alt="Centered Image">
+        </div>
     </div>
 </body>
 </html>

@@ -20,8 +20,7 @@
             padding: 20px;
             background-color: white;
             box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
-            overflow-y: hidden; /* Removes scrollbar */
-            height: 100vh; /* Ensures full height */
+            overflow-y: auto;
         }
 
         h1 {
@@ -70,27 +69,27 @@
             .sidebar {
                 width: 100%;
                 order: 2;
-                padding: 15px;
+                padding: 15px; /* Reduced padding for mobile */
             }
             .main-content {
                 order: 1;
-                padding: 5px;
+                padding: 10px; /* Added padding to ensure the image doesn't touch the edges */
             }
             img {
-                max-width: 90%;
-                max-height: 50vh;
+                max-width: 100%;
+                max-height: 40vh; /* Reduced the height to ensure it fits without need for scrolling */
             }
         }
     </style>
 </head>
 <body>
-    <div class="sidebar">
-        <h1>Welcome to the Landing Page</h1>
-        <a href="./summary.html" class="topic-button">Topic 1</a>
-        <a href="./summary.html" class="topic-button">Topic 2</a>
-    </div>
     <div class="main-content">
         <img src="4f152ec8-180d-405c-b450-6a0d9d136189.png" alt="Centered Image">
+    </div>
+    <div class="sidebar">
+        <h1>Welcome to the Landing Page</h1>
+        <a href="summary.html" class="topic-button">Topic 1</a>
+        <a href="summary.html" class="topic-button">Topic 2</a>
     </div>
 </body>
 </html>

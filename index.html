@@ -59,6 +59,7 @@
             max-height: 80vh;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* This ensures spacing between image and sidebar on mobile */
         }
 
         /* Media Queries for Responsiveness */
@@ -68,11 +69,10 @@
             }
             .sidebar {
                 width: 100%;
-                order: 1;
+                order: 2;
             }
             .main-content {
-                order: 2;
-                padding: 20px;  /* Added padding for mobile view */
+                order: 1;
             }
             img {
                 max-width: 100%;
@@ -81,10 +81,13 @@
     </style>
 </head>
 <body>
+    <div class="main-content">
+        <img src="4f152ec8-180d-405c-b450-6a0d9d136189.png" alt="Centered Image">
+    </div>
     <div class="sidebar">
         <h1>Welcome to the Landing Page</h1>
         <a href="summary.html" class="topic-button">Topic 1</a>
         <a href="summary.html" class="topic-button">Topic 2</a>
     </div>
-    <div class="main-content">
-        <img src="4f152ec8-180d-405c-b
+</body>
+</html>

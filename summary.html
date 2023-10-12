@@ -1,32 +1,99 @@
-<!-- ... [The beginning of the Summary page remains the same] ... -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .sidebar {
+            width: 250px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+
+        h1 {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .nav-button {
+            display: block;
+            width: 100%;
+            background-color: #4CAF50;
+            padding: 8px 16px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-align: left;
+        }
+
+        .nav-button:hover {
+            background-color: #45a049;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
 
         img {
             max-width: 80%;
             max-height: 80vh;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
         }
 
-        /* ... [Rest of the styles remain the same] ... */
-
+        /* Media Queries for Responsiveness */
+        @media screen and (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                order: 1;
+                padding: 15px; /* Reduced padding for mobile */
+            }
+            .main-content {
+                order: 2;
+                padding: 10px; /* Added padding to ensure the image doesn't touch the edges */
+            }
+            img {
+                max-width: 100%;
+                max-height: 40vh; /* Reduced the height to ensure it fits without need for scrolling */
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="main-content">
-        <img src="4f152ec8-180d-405c-b450-6a0d9d136189.png" alt="Centered Image">
-    </div>
     <div class="sidebar">
         <h1>Summary for Topic 1</h1>
         <p>Here is the content for Topic 1.</p>
         <a href="index.html" class="nav-button">Back to Landing Page</a>
     </div>
-    <!-- Optional Dark Mode Toggle -->
-    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-    <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-        }
-    </script>
+    <div class="main-content">
+        <img src="4f152ec8-180d-405c-b450-6a0d9d136189.png" alt="Centered Image">
+    </div>
 </body>
 </html>
